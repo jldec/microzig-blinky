@@ -1,0 +1,19 @@
+// https://github.com/ziglang/zig/blob/master/doc/build.zig.zon.md
+.{
+    .name = "microzig-blinky",
+    .version = "0.0.0",
+    .dependencies = .{
+        // pin to recent microzig to avoid this issue
+        // https://github.com/ZigEmbeddedGroup/microzig/issues/389
+        .microzig = .{
+            .url = "git+https://github.com/ZigEmbeddedGroup/microzig#3c4a1c291e3f8913878cab489f0174375fa02488",
+            .hash = "1220d7f083b4c18426e14e0c006e61e10476fb781fcfdeeaacfee3d77814a74eb3f1",
+        },
+    },
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+        "README.md",
+    },
+}
